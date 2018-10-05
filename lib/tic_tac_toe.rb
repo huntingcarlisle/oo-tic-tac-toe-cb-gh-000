@@ -87,6 +87,11 @@ class TicTacToe
   def draw?
     # if the board is full and no win exists, then true
     return (full?() && !(won?()))
-  end   
+  end 
+  
+  def over?(board)
+    # if board won or is a draw or is full, returns true
+    return won?(board) || draw?(board)
+  end
     
 end
