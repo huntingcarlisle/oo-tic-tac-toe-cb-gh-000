@@ -93,5 +93,11 @@ class TicTacToe
     # if board won or is a draw or is full, returns true
     return won?() || draw?()
   end
+  
+  def winner(board)
+    if won?(board)
+      return board[won?(board)[0]]
+    end
+  end  
     
 end
