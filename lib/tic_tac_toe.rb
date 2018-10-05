@@ -68,14 +68,14 @@ class TicTacToe
     end
   end
   
-def won?(board)
-  WIN_COMBINATIONS.each do |combination|
-    moves = [board[combination[0]], board[combination[1]], board[combination[2]]]
-    if moves.all?{|move| (move == "X")} || moves.all?{|move| (move == "O")}
-      return combination
+  def won?(board)
+    WIN_COMBINATIONS.each do |combination|
+      moves = [board[combination[0]], board[combination[1]], board[combination[2]]]
+      if moves.all?{|move| (move == "X")} || moves.all?{|move| (move == "O")}
+        return combination
+      end
     end
+    return false
   end
-  return false
-end
   
 end
